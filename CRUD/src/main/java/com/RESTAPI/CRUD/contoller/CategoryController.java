@@ -6,6 +6,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import com.RESTAPI.CRUD.entities.Category;
+import com.RESTAPI.CRUD.models.CategoryModel;
+import com.RESTAPI.CRUD.models.CategoryRes;
 import com.RESTAPI.CRUD.services.CategoryService;
 
 @RestController
@@ -16,27 +18,36 @@ public class CategoryController {
 	public CategoryService categoryService;
 	
     @GetMapping
-    public Page<Category> getAllCategories(Pageable pageable) {
-        return categoryService.getAllCategories(pageable);
+    public Page<CategoryRes> getAllCategories(@RequestParam("page") Integer page) {
+    	
+        return categoryService.getAllCategories(0, page);
     }
 
     @PostMapping
-    public Category createCategory(@RequestBody Category category) {
-        return categoryService.createCategory(category);
+    public CategoryModel createCategory(@RequestBody CategoryModel category) {
+    	Category category2 = new Category();
+    	category2.setName(category.getName());
+    	Category res =  categoryService.createCategory(category2);
+    	CategoryModel categoryModelRes = new CategoryModel();
+    	categoryModelRes.setId(res.getId());
+    	categoryModelRes.setName(res.getName());
+    	return categoryModelRes;
     }
 
     @GetMapping("/{id}")
-    public Category getCategoryById(@PathVariable Long id) {
+    public Category getCategoryById(@PathVariable("id") Integer id) {
+    	System.out.println("id " + id);
         return categoryService.getCategoryById(id);
     }
 
     @PutMapping("/{id}")
-    public Category updateCategory(@PathVariable Long id, @RequestBody Category category) {
-        return categoryService.updateCategory(id, category);
+    public String updateCategory(@PathVariable("id") Integer id, @RequestBody Category category) {
+        categoryService.updateCategory(id, category);
+        return "category Id " + id +" updated";
     }
 
     @DeleteMapping("/{id}")
-    public String deleteCategory(@PathVariable Long id) {
+    public String deleteCategory(@PathVariable("id") Integer id) {
         categoryService.deleteCategory(id);
         return "Category deleted successfully.";
     }

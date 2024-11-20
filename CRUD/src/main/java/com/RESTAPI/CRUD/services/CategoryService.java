@@ -4,16 +4,17 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Page;
 
 import com.RESTAPI.CRUD.entities.Category;
+import com.RESTAPI.CRUD.models.CategoryRes;
 
 public interface CategoryService {
 	
-	public Page<Category> getAllCategories(Pageable pageable);
+	public Page<CategoryRes> getAllCategories(int page, int size);
 	
 	public Category createCategory(Category category);
 	
-	public Category getCategoryById(long id);
+	public Category getCategoryById(Integer id);
 	
-	public Category updateCategory(long id,Category updatecategory);
+	public Category updateCategory(Integer id,Category updatecategory);
 	
-	public void deleteCategory(long id);
+	public void deleteCategory(Integer id);
 }

@@ -1,37 +1,48 @@
 package com.RESTAPI.CRUD.entities;
 
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import jakarta.persistence.*;;
 
 @Entity
+//@Table(name = "category")
 public class Category {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+//	@Column
+	private Integer id;
 	
+//	@Column
 	private String name;
 	
-	 @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
-	private List<Product> products;
+	
+	  //@OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
+//	  private List<Product> products;
+	  
+	  @OneToMany(fetch = FetchType.EAGER, mappedBy = "category", cascade = CascadeType.ALL)
+	  private List<Product> products = new ArrayList<Product>();
+	 
 
 	public Category() {
 		
 	}
 	
-	public Category(Long id, String name, List<Product> products) {
+	public Category(Integer id, String name, List<Product> products) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.products = products;
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -43,16 +54,14 @@ public class Category {
 		this.name = name;
 	}
 
-	public List<Product> getProducts() {
-		return products;
-	}
+	
+	  public List<Product> getProducts() { return products; }
+	  
+	  public void setProducts(List<Product> products) { this.products = products; }
+	 
 
-	public void setProducts(List<Product> products) {
-		this.products = products;
-	}
-
-	@Override
-	public String toString() {
-		return "Category [id=" + id + ", name=" + name + ", products=" + products + "]";
-	}
+	
+	  @Override public String toString() { return "Category [id=" + id + ", name="
+	  + name + ", products=" + products + "]"; }
+	 
 }
