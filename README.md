@@ -65,7 +65,7 @@ Example :
 {
     "name": "HP Pavilion",
     "price": 75000.00
-// Mentioned the product id that you want to update
+// Mentioned the product id in URl that you want to update
 }
 ```
 
