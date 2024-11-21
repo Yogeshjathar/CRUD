@@ -59,9 +59,6 @@ spring.datasource.username=root
 spring.datasource.password=password
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver  
 ```
-## Note : 1. make shure to create a schema if it shows error or exception in application 
-##        2. create schema as ``` machine_test ```
-
 3. Build the project using Maven:
 ``` mvn clean install ```
 
@@ -70,6 +67,9 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 
 5. Access the application at:
 URL: http://localhost:8080
+
+## Note : 1. make shure to create a schema if it shows error or exception in application 
+## Note : 2. create schema as ``` machine_test ```
 
 # Machine Test Execution
 1. Run the application locally following the steps above.
