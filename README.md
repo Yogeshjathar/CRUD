@@ -14,9 +14,17 @@ URL: http://localhost:8080/api/categories/{id}
 
 ## POST Create a New Category
 URL: http://localhost:8080/api/categories
+Example :``` {
+    "name": "Electronics"
+}
+```
 
 ## PUT Update Category by ID
 URL: http://localhost:8080/api/categories/{id}
+Example :``` {
+    "name": "Electronics accessories"
+}
+```
 
 ## DELETE Category by ID
 URL: http://localhost:8080/api/categories/{id}
@@ -31,9 +39,23 @@ URL: http://localhost:8080/api/products/{id}
 
 ## POST Create a New Product
 URL: http://localhost:8080/api/products
+Example :```{
+    "name": "HP",
+    "price": 299.99,
+    "category": {
+        "id": 1
+    }
+}
+```
 
 ## PUT Update Product by ID
 URL: http://localhost:8080/api/products/{id}
+Example :```{
+    "name": "HP Pavilion",
+    "price": 75000.00
+// Mentioned the product id that you want to update
+}
+```
 
 ## DELETE Product by ID
 URL: http://localhost:8080/api/products/{id}
