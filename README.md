@@ -59,8 +59,8 @@ spring.datasource.username=root
 spring.datasource.password=password
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver  
 ```
-# Note : 1. make shure to create a schema if it shows error or exception in application 
-#        2. create schema as ``` machine_test ```
+## Note : 1. make shure to create a schema if it shows error or exception in application 
+##        2. create schema as ``` machine_test ```
 
 3. Build the project using Maven:
 ``` mvn clean install ```
