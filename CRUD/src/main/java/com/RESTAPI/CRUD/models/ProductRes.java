@@ -1,19 +1,18 @@
 package com.RESTAPI.CRUD.models;
 
-import com.RESTAPI.CRUD.entities.Category;
-
 public class ProductRes {
-	
+
 	private Integer Id;
-	
+
 	private String name;
-	
+
 	private Double price;
-	
+
 	private Integer category_id;
-	
-	public ProductRes() {}
-	
+
+	public ProductRes() {
+	}
+
 	public ProductRes(Integer id, String name, Double price, Integer category_id) {
 		super();
 		Id = id;
@@ -21,6 +20,7 @@ public class ProductRes {
 		this.price = price;
 		this.category_id = category_id;
 	}
+
 	public String getName() {
 		return name;
 	}
@@ -36,7 +36,7 @@ public class ProductRes {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-	
+
 	public Integer getcategory_id() {
 		return category_id;
 	}
@@ -44,7 +44,7 @@ public class ProductRes {
 	public void setcategory_id(Integer category_id) {
 		this.category_id = category_id;
 	}
-	
+
 	public Integer getId() {
 		return Id;
 	}

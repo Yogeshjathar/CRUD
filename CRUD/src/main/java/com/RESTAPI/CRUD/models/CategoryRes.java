@@ -1,12 +1,13 @@
 package com.RESTAPI.CRUD.models;
 
 public class CategoryRes {
-	
+
 	private Integer id;
-	
+
 	private String name;
-	
-	public CategoryRes() {}
+
+	public CategoryRes() {
+	}
 
 	public CategoryRes(Integer id, String name) {
 		super();
@@ -29,7 +30,5 @@ public class CategoryRes {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	
 
 }

@@ -12,12 +12,10 @@ public class Product {
 	private String name;
 
 	private Double price;
-	
-	  
-	  @ManyToOne
-	  @JoinColumn(name = "category_id", nullable = false)
-	  private Category category;
-	 
+
+	@ManyToOne
+	@JoinColumn(name = "category_id", nullable = false)
+	private Category category;
 
 	public Product() {
 
@@ -55,13 +53,17 @@ public class Product {
 		this.price = price;
 	}
 
-	
-	  public Category getCategory() { return category; }
-	  
-	  public void setCategory(Category category) { this.category = category; }
-	  
-	  @Override public String toString() { return "Product [id=" + id + ", name=" +
-	  name + ", price=" + price + ", category=" + category + "]"; }
-	 
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+	@Override
+	public String toString() {
+		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", category=" + category + "]";
+	}
 
 }

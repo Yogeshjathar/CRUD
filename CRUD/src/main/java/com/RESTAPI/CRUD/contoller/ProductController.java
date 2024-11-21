@@ -2,7 +2,6 @@ package com.RESTAPI.CRUD.contoller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 import com.RESTAPI.CRUD.entities.Product;
@@ -34,12 +33,6 @@ public class ProductController {
     @GetMapping("/{id}")
     public ProductRes getProductById(@PathVariable("id") Integer id) {
     	 return productService.getProductById(id);
-//    	 Product res =
-//    	ProdustRes model = new ProdustRes();
-//    	model.setName(res.getName());
-//    	model.setPrice(res.getPrice());
-//    	model.setcategory_id(res.getCategory().getId());
-//    	return model;
     }
 
     @PutMapping("/{id}")

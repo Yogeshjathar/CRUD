@@ -2,7 +2,6 @@ package com.RESTAPI.CRUD.services;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,7 +15,6 @@ import com.RESTAPI.CRUD.Repositories.ProductRepository;
 import com.RESTAPI.CRUD.entities.Category;
 import com.RESTAPI.CRUD.entities.Product;
 import com.RESTAPI.CRUD.models.CategoryRes;
-import com.RESTAPI.CRUD.models.ProductRes;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
@@ -68,11 +66,11 @@ public class CategoryServiceImpl implements CategoryService {
 
 	@Override
 	public Page<CategoryRes> getAllCategories(int page, int size) {
-		List<CategoryRes> products = new ArrayList<CategoryRes>();
 		Pageable pageRequest = createPageRequestUsing(page, size);
 		List<CategoryRes> allCategories = categoryRepository.getAllCategories();
 		int start = (int) pageRequest.getOffset();
-		int end = Math.min((start + pageRequest.getPageSize()), allCategories.size());
+//		int end = Math.min((start + pageRequest.getPageSize()), allCategories.size());
+		int end = allCategories.size();
 		List<CategoryRes> pageContent = allCategories.subList(start, end);
 		return new PageImpl<>(pageContent, pageRequest, allCategories.size());
 	}
