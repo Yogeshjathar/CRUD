@@ -15,7 +15,8 @@ URL: http://localhost:8080/api/categories/{id}
 ## POST Create a New Category
 URL: http://localhost:8080/api/categories
 Example :
-``` {
+```
+{
     "name": "Electronics"
 }
 ```
@@ -23,7 +24,8 @@ Example :
 ## PUT Update Category by ID
 URL: http://localhost:8080/api/categories/{id}
 Example :
-``` {
+```
+{
     "name": "Electronics accessories"
 }
 ```
@@ -42,7 +44,8 @@ URL: http://localhost:8080/api/products/{id}
 ## POST Create a New Product
 URL: http://localhost:8080/api/products
 Example :
-```{
+```
+{
     "name": "HP",
     "price": 299.99,
     "category": {
@@ -54,7 +57,8 @@ Example :
 ## PUT Update Product by ID
 URL: http://localhost:8080/api/products/{id}
 Example :
-```{
+```
+{
     "name": "HP Pavilion",
     "price": 75000.00
 // Mentioned the product id that you want to update
