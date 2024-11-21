@@ -14,6 +14,7 @@ URL: http://localhost:8080/api/categories/{id}
 
 ## POST Create a New Category
 URL: http://localhost:8080/api/categories
+
 Example :
 ```
 {
@@ -23,6 +24,7 @@ Example :
 
 ## PUT Update Category by ID
 URL: http://localhost:8080/api/categories/{id}
+
 Example :
 ```
 {
@@ -43,6 +45,7 @@ URL: http://localhost:8080/api/products/{id}
 
 ## POST Create a New Product
 URL: http://localhost:8080/api/products
+
 Example :
 ```
 {
@@ -56,6 +59,7 @@ Example :
 
 ## PUT Update Product by ID
 URL: http://localhost:8080/api/products/{id}
+
 Example :
 ```
 {
