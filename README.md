@@ -103,9 +103,9 @@ spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 URL: http://localhost:8080
 
 ## Note : 1. make shure to create a schema if it shows error or exception in application 
-## Note : 2. create schema as ``` machine_test ```
+## Note : 2. create schema as ``` category_product ```
 
-# Machine Test Execution
+# Execution
 1. Run the application locally following the steps above.
 2. Use tools like Postman to test the APIs.
 3. Verify functionality and pagination by interacting with the endpoints.
