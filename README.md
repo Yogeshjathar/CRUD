@@ -88,7 +88,7 @@ cd <repository-folder>
 2. Configure the database in application.properties:
 ```
 #database configuration
-spring.datasource.url=jdbc:mysql://localhost:3306/machine_test
+spring.datasource.url=jdbc:mysql://localhost:3306/category_product
 spring.datasource.username=root
 spring.datasource.password=password
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver  
